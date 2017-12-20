@@ -15,12 +15,13 @@
 				
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 		<link rel="stylesheet" href="css/grid.css">
+		<link rel="stylesheet" href="css/blueimp-gallery.css">
 		<link rel="stylesheet" href="css/styles.css">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<script src="js/cycle2.min.js"></script>
-		<script src="js/cycle2.carousel.min.js"></script>
+		<script src="js/carousel.min.js"></script>
+		<script src="js/jquery.blueimp-gallery.min.js"></script>
 		<script src="js/scripts.js"></script>
 	
 	</head>
@@ -98,30 +99,27 @@
 		
 		<section class="banners">
 			
-			<div class="slider">
+			<div id="hero-banners" class="carousel slide" data-ride="hero-banners">
 								
-				<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout=0 data-cycle-next="#next-banners-item" data-cycle-prev="#prev-banners-item" data-cycle-pager="#banner-pager" data-cycle-slides="div.banners-item" data-cycle-pager-template="<a></a>">
-					
-					<div class="banners-item banners-item-1"></div>
-					
-					<div class="banners-item banners-item-2"></div>
-					
-					<div id="banner-pager"></div>
-					
+				<div class="carousel-inner">
+					<div class="item banners-item-1 active"></div>
+					<div class="item banners-item-2"></div>
 				</div>
 				
 				<ul class="carousel-controls">
-					
-					<li class="carousel-control left"><a href=# id=prev-banners-item></a></li>
-					
-					<li class="carousel-control right"><a href=# id=next-banners-item></a></li>
-					
-				</ul>
+		            <li class="carousel-control left" href="#hero-banners" data-slide="prev"><span></span></li>
+		            <li class="carousel-control right" href="#hero-banners" data-slide="next"><span></span></li>
+		        </ul>
+		        
+				<ol class="carousel-indicators indicators inline">
+	                <li class="indicator active" data-target="#hero-banners" data-slide-to="0"><span></span></li>
+	                <li class="indicator" data-target="#hero-banners" data-slide-to="1"><span></span></li>
+	            </ol>
 			
 			</div>
 											
-		</section>
-		
+		</section>    
+    
 		
 		<section class="links text-center">
 			
@@ -302,11 +300,11 @@
 				<h2>Testimonials</h2>
 				<p class="subheader">What people say about us</p>
 				
-				<div class="slider">
-												
-					<div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-timeout=0 data-cycle-next="#next-testimonials-item" data-cycle-prev="#prev-testimonials-item" data-cycle-slides="div.testimonials-item"> <!-- data-cycle-fx="fade" -->
+				<div id="testimonials" class="carousel slide" data-ride="testimonials">
+								
+					<div class="carousel-inner">
 						
-						<div class="testimonials-item text-center">
+						<div class="item testimonials-item text-center active">
 							
 							<p class="testimonial">I’ve checked marksmansecurity.com. I’m quite impressed with this company. Looks like Greg had approached security issues seriously. We are going through difficult times and we shouldn’t underestimate the importance of building security. Thank you for your effort, Greg!</p>
 							
@@ -316,7 +314,7 @@
 							
 						</div>
 						
-						<div class="testimonials-item text-center">
+						<div class="item testimonials-item text-center">
 							
 							<p class="testimonial">I’ve checked marksmansecurity.com. I’m quite impressed with this company. Looks like Greg had approached security issues seriously. We are going through difficult times and we shouldn’t underestimate the importance of building security. Thank you for your effort, Greg!</p>
 							
@@ -326,7 +324,7 @@
 							
 						</div>
 						
-						<div class="testimonials-item text-center">
+						<div class="item testimonials-item text-center">
 							
 							<p class="testimonial">I’ve checked marksmansecurity.com. I’m quite impressed with this company. Looks like Greg had approached security issues seriously. We are going through difficult times and we shouldn’t underestimate the importance of building security. Thank you for your effort, Greg!</p>
 							
@@ -335,18 +333,20 @@
 							<p class="date sans-serif"> July 5, 2009</p>
 							
 						</div>
-						
-						<div class="cycle-pager"></div>
 						
 					</div>
 					
 					<ul class="carousel-controls">
-						
-						<li class="carousel-control left"><a href=# id=prev-testimonials-item></a></li>
-						
-						<li class="carousel-control right"><a href=# id=next-testimonials-item></a></li>
-						
-					</ul>
+			            <li class="carousel-control left" href="#testimonials" data-slide="prev"><span></span></li>
+			            <li class="carousel-control right" href="#testimonials" data-slide="next"><span></span></li>
+			            <li class="carousel-control right" href="#testimonials" data-slide="next"><span></span></li>
+			        </ul>
+			        
+					<ol class="carousel-indicators indicators inline">
+		                <li class="indicator active" data-target="#testimonials" data-slide-to="0"><span></span></li>
+		                <li class="indicator" data-target="#testimonials" data-slide-to="1"><span></span></li>
+		                <li class="indicator" data-target="#testimonials" data-slide-to="2"><span></span></li>
+		            </ol>
 				
 				</div>
 				
@@ -362,14 +362,12 @@
 				<h3>Our awards</h3>
 				<p class="subheader">Our awards and diplomas</p>
 				
-				<ul id="custom-pager" class="awards-list cycle-pager external text-center clearfix">
+				<ul class="awards-list text-center clearfix">
 															
 					<li class="awards-item">
 					
-						<a href="#" data-toggle="modal" data-target="#awards">
-													
+						<a href="img/award-1-big.jpg" title="Gogreen Recognition Award 2012" data-gallery="#blueimp-gallery-awards">
 							<img src="img/award-1.png" alt="">
-																																
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -380,10 +378,8 @@
 																
 					<li class="awards-item">
 					
-						<a href="#" data-toggle="modal" data-target="#awards">
-						
+						<a href="img/award-2-big.jpg" title="Gogreen Recognition Award 2015" data-gallery="#blueimp-gallery-awards">
 							<img src="img/award-2.png" alt="">
-													
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -394,10 +390,8 @@
 					
 					<li class="awards-item">
 					
-						<a href="#" data-toggle="modal" data-target="#awards">
-						
+						<a href="img/award-3-big.jpg" title="Aventura Marketing Council 2015" data-gallery="#blueimp-gallery-awards">
 							<img src="img/award-3.png" alt="">
-													
 						</a>
 						
 						<p class="sans-serif">Aventura Marketing Council</p>
@@ -408,10 +402,8 @@
 					
 					<li class="awards-item">
 						
-						<a href="#" data-toggle="modal" data-target="#awards">
-						
+						<a href="img/award-4-big.jpg" title="Gogreen Recognition Award 2016" data-gallery="#blueimp-gallery-awards">
 							<img src="img/award-4.png" alt="">
-													
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -422,10 +414,8 @@
 					
 					<li class="awards-item">
 						
-						<a href="#" data-toggle="modal" data-target="#awards">
-						
+						<a href="img/award-5-big.jpg" title="Gogreen Recognition Award 2017" data-gallery="#blueimp-gallery-awards">
 							<img src="img/award-5.png" alt="">
-													
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -435,51 +425,7 @@
 					</li>
 																				
 				</ul>
-				
-				
-				<div id="awards" class="modal text-center" tabindex="-1" role="dialog">
-											
-					<div class="item-gallery">
-						
-						<div class="cycle-slideshow" 
-							data-cycle-fx=scrollHorz
-							data-cycle-timeout=0
-							data-cycle-pager="#custom-pager"
-							data-cycle-next="#next-gallery-awards"
-							data-cycle-prev="#prev-gallery-awards"
-							data-cycle-pager-template=""
-							>
-								
-							<img src="img/award-1-big.jpg">
 							
-							<img src="img/award-2-big.jpg">
-							
-							<img src="img/award-3-big.jpg">
-							
-							<img src="img/award-4-big.jpg">
-							
-							<img src="img/award-5-big.jpg">
-							
-						</div>
-						
-						<ul class="carousel-controls">
-							
-							<li class="carousel-control left"><a href="#" id="prev-gallery-awards"></a></li>
-							
-							<li class="carousel-control right"><a href="#" id="next-gallery-awards"></a></li>
-							
-						</ul>
-						
-					</div>
-					
-					<div class="button-close">
-						
-						<a href="#" class="btn-close" data-dismiss="modal"><i class="fa fa-times"></i></a>
-						
-					</div>
-					
-				</div>
-			
 			</div>
 			
 		</section>
@@ -600,6 +546,18 @@
 			</div>
 			
 		</footer>	
+		
+		<div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false" style="display: none;">
+
+		    <div class="slides"></div>
+		    
+		    <h4 class="title"></h4>
+		    <a class="prev"></a>
+		    <a class="next"></a>
+		    <a class="close"></a>
+		    <ol class="indicator"></ol>
+		    
+		</div>
 		
 	</body>
 	
