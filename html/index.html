@@ -19,8 +19,7 @@
 		<link rel="stylesheet" href="css/styles.css">
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/carousel.min.js"></script>
+		<script src="js/bootstrap.js"></script>
 		<script src="js/jquery.blueimp-gallery.min.js"></script>
 		<script src="js/scripts.js"></script>
 	
@@ -38,11 +37,11 @@
 				
 					<ul class="topbar-list inline sans-serif">
 						
-						<li class="topbar-item"><a href="#" class="topbar-item-address"><img src="img/topbar-item-address.png" alt="">19501 W Country Club Dr. Aventura FL 33180</a></li>
+						<li class="topbar-item"><a href="#" class="topbar-item-address"><img src="img/icons/topbar-location.svg" alt="">19501 W Country Club Dr. Aventura FL 33180</a></li>
 						
-						<li class="topbar-item"><a href="#" class="topbar-item-email"><img src="img/topbar-item-email.png" alt="">asst2turnberry@gmail.com</a></li>
+						<li class="topbar-item"><a href="#" class="topbar-item-email"><img src="img/icons/topbar-email.svg" alt="">asst2turnberry@gmail.com</a></li>
 						
-						<li class="topbar-item"><a href="#" class="topbar-item-phone"><img src="img/topbar-item-phone.png" alt="">305-466-7767</a></li>
+						<li class="topbar-item"><a href="#" class="topbar-item-phone"><img src="img/icons/topbar-phone.svg" alt="">305-466-7767</a></li>
 						
 					</ul>
 				
@@ -54,11 +53,11 @@
 				
 				<div class="container">
 					
-					<a class="navbar-logo" href="index.html" rel="home"><img src="img/logo.png" alt=""></a>
+					<a class="navbar-logo" href="index.html" rel="home"><img src="img/logo.svg" alt=""></a>
 					
-					<button type="button" class="navbar-toggle">
+					<button type="button" class="btn btn-secondary btn-sm navbar-toggle">
 					
-						<span><h5>Menu</h5></span>
+						Menu
 						
 						<span class="hamburger">
 													
@@ -84,7 +83,7 @@
 							
 							<li class="menu-item"><a href="#">News</a></li>
 							
-							<li class="menu-item"><a href="#">Contcts</a></li>
+							<li class="menu-item"><a href="#">Contacts</a></li>
 							
 						</ul>
 						
@@ -99,11 +98,15 @@
 		
 		<section class="banners">
 			
-			<div id="hero-banners" class="carousel slide" data-ride="hero-banners">
+			<div id="hero-banners" class="carousel slide carousel-fade" data-ride="hero-banners">
 								
-				<div class="carousel-inner">
-					<div class="item banners-item-1 active"></div>
-					<div class="item banners-item-2"></div>
+				<div class="carousel-inner parallax parallax-container">
+					<div class="item parallax-img parallax-img-1 active"></div>
+					<div class="item parallax-img parallax-img-2"></div>
+					<div class="item parallax-img parallax-img-3"></div>
+					<div class="item parallax-img parallax-img-4"></div>
+					<div class="item parallax-img parallax-img-5"></div>
+					<div class="item parallax-img parallax-img-6"></div>
 				</div>
 				
 				<ul class="carousel-controls">
@@ -114,6 +117,10 @@
 				<ol class="carousel-indicators indicators inline">
 	                <li class="indicator active" data-target="#hero-banners" data-slide-to="0"><span></span></li>
 	                <li class="indicator" data-target="#hero-banners" data-slide-to="1"><span></span></li>
+	                <li class="indicator" data-target="#hero-banners" data-slide-to="2"><span></span></li>
+	                <li class="indicator" data-target="#hero-banners" data-slide-to="3"><span></span></li>
+	                <li class="indicator" data-target="#hero-banners" data-slide-to="4"><span></span></li>
+	                <li class="indicator" data-target="#hero-banners" data-slide-to="5"><span></span></li>
 	            </ol>
 			
 			</div>
@@ -128,30 +135,30 @@
 				<ul class="links-list clearfix">
 									
 					<li class="links-item">
-						<a href="#">
-							<img src="img/link-amenities.png" alt="">
+						<a href="amenities.html">
+							<img src="img/icons/link-amenities.svg" alt="">
 							<h5>Amenities</h5>
 						</a>
 					</li>
 					
 					<li class="links-item">
-						<a href="#">
-							<img src="img/link-location.png" alt="">
-							<h5>Location</h5>
+						<a href="gallery.html">
+							<img src="img/icons/link-gallery.svg" alt="">
+							<h5>Gallery</h5>
 						</a>
 					</li>
 					
 					<li class="links-item">
-						<a href="#">
-							<img src="img/link-plans.png" alt="">
+						<a href="floorplans.html">
+							<img src="img/icons/link-floorplans.svg" alt="">
 							<h5>Floor Plans</h5>
 						</a>
 					</li>
 					
 					<li class="links-item">
-						<a href="#">
-							<img src="img/link-gallery.png" alt="">
-							<h5>Gallery</h5>
+						<a href="location.html">
+							<img src="img/icons/link-location.svg" alt="">
+							<h5>Location</h5>
 						</a>
 					</li>
 										
@@ -173,102 +180,116 @@
 									
 					<div class="col-sm-4">
 						
-						<div class="news-item animated fadeInUpSmall">
+						<div class="news-item">
 							
-							<a href="#" class="frame">
+							<a href="#">
 								
-								<img src="img/news-1.jpg" class="wp-post-image" alt="">
-							
-								<div class="entry-meta sans-serif">
-									
-									<ul class="inline">
-										
-										<li class="meta-date">
-											<span>Nov 4, 2017</span>
-										</li>
-										
-										<li class="meta-comments">
-											<span>1 Comment</span>
-										</li>
-										
-									</ul>
-									
-								</div>
+								<img src="img/news-1.jpg" class="wp-post-image frame-gold" alt="">
 								
-								<h4>Preparation for hurricane Irma</h4>
-								
-								<p>Dear Residents, We urge you to begin your preparation for this Hurricane, which is considered to be one of the strongest ones we’ve had, so far…</p>
+								<h4 class="entry-header">Preparation for hurricane Irma</h4>
 							
 							</a>
 							
+							<div class="entry-meta sans-serif">
+								
+								<ul class="inline">
+									
+									<li class="meta-date">
+										<span>Nov 4, 2017</span>
+									</li>
+										
+									<li>
+										/
+									</li>
+
+									
+									<li class="post_meta_item post_meta_categories">
+										<a href="#" rel="category">News</a>
+									</li>
+									
+								</ul>
+								
+							</div>
+							
+							<p class="excerpt">Dear Residents, We urge you to begin your preparation for this Hurricane, which is considered to be one of the strongest ones we’ve had, so far…</p>
+														
 						</div>
 					
 					</div>
 					
 					<div class="col-sm-4">
 						
-						<div class="news-item animated fadeInUpSmall">
+						<div class="news-item">
 							
-							<a href="#" class="frame">
+							<a href="#">
 								
-								<img src="img/news-2.jpg" class="wp-post-image" alt="">
-							
-								<div class="entry-meta sans-serif">
-									
-									<ul class="inline">
-										
-										<li class="meta-date">
-											<span>Nov 4, 2017</span>
-										</li>
-										
-										<li class="meta-comments">
-											<span>1 Comment</span>
-										</li>
-										
-									</ul>
-									
-								</div>
+								<img src="img/news-2.jpg" class="wp-post-image frame-gold" alt="">
 								
-								<h4>Happy 4th of July!</h4>
-								
-								<p>We Wish You an Exciting and Happy 4th July! From all of us at Turnberry on the Green Condominium. Sincerely, Gregory Arzumanov President…</p>
+								<h4 class="entry-header">Happy 4th of July!</h4>
 							
 							</a>
 							
+							<div class="entry-meta sans-serif">
+								
+								<ul class="inline">
+									
+									<li class="meta-date">
+										<span>Nov 4, 2017</span>
+									</li>
+										
+									<li>
+										/
+									</li>
+
+									
+									<li class="post_meta_item post_meta_categories">
+										<a href="#" rel="category">News</a>
+									</li>
+									
+								</ul>
+								
+							</div>
+																
+							<p class="excerpt">We Wish You an Exciting and Happy 4th July! From all of us at Turnberry on the Green Condominium. Sincerely, Gregory Arzumanov President…</p>
+														
 						</div>
 					
 					</div>
 					
 					<div class="col-sm-4">
 						
-						<div class="news-item animated fadeInUpSmall">
+						<div class="news-item">
 							
-							<a href="#" class="frame">
+							<a href="#">
 								
-								<img src="img/news-3.jpg" class="wp-post-image" alt="">
+								<img src="img/news-3.jpg" class="wp-post-image frame-gold" alt="">
+								
+								<h4 class="entry-header">Appeal your 2016 Property Tax</h4>
 							
-								<div class="entry-meta sans-serif">
-									
-									<ul class="inline">
-										
-										<li class="meta-date">
-											<span>Nov 4, 2017</span>
-										</li>
-										
-										<li class="meta-comments">
-											<span>1 Comment</span>
-										</li>
-										
-									</ul>
-									
-								</div>
-							
-								<h4>Appeal your 2016 Property Tax</h4>
-								
-								<p>Dear Property Owner: On August 21nd, 2016, the Miami-Dade County property Appraiser mailed your Notice of Proposed Property Tax (TRIM)…</p>
-								
 							</a>
 							
+							<div class="entry-meta sans-serif">
+								
+								<ul class="inline">
+									
+									<li class="meta-date">
+										<span>Nov 4, 2017</span>
+									</li>
+										
+									<li>
+										/
+									</li>
+									
+									<li class="post_meta_item post_meta_categories">
+										<a href="#" rel="category">News</a>
+									</li>
+									
+								</ul>
+								
+							</div>
+							
+							<p class="excerpt">Dear Property Owner: On August 21nd, 2016, the Miami-Dade County property Appraiser mailed your Notice of Proposed Property Tax (TRIM)…</p>
+														
 						</div>
 					
 					</div>
@@ -284,9 +305,7 @@
 			
 			<div class="container">
 				
-				<div class="separator-border decorative-element-1">
-					
-				</div>
+				<div class="separator-border decorative-element-1 full-width no-margin"></div>
 			
 			</div>
 			
@@ -306,15 +325,7 @@
 						
 						<div class="item testimonials-item text-center active">
 							
-							<p class="testimonial">I’ve checked marksmansecurity.com. I’m quite impressed with this company. Looks like Greg had approached security issues seriously. We are going through difficult times and we shouldn’t underestimate the importance of building security. Thank you for your effort, Greg!</p>
-							
-							<p class="cite">Millie</p>
-							
-							<p class="date sans-serif"> July 5, 2009</p>
-							
-						</div>
-						
-						<div class="item testimonials-item text-center">
+							<p class="quote"><img src="img/elements/quote.svg" alt=""></p>
 							
 							<p class="testimonial">I’ve checked marksmansecurity.com. I’m quite impressed with this company. Looks like Greg had approached security issues seriously. We are going through difficult times and we shouldn’t underestimate the importance of building security. Thank you for your effort, Greg!</p>
 							
@@ -325,6 +336,20 @@
 						</div>
 						
 						<div class="item testimonials-item text-center">
+							
+							<p class="quote"><img src="img/elements/quote.svg" alt=""></p>
+							
+							<p class="testimonial">I’ve checked marksmansecurity.com. I’m quite impressed with this company. Looks like Greg had approached security issues seriously. We are going through difficult times and we shouldn’t underestimate the importance of building security. Thank you for your effort, Greg!</p>
+							
+							<p class="cite">Millie</p>
+							
+							<p class="date sans-serif"> July 5, 2009</p>
+							
+						</div>
+						
+						<div class="item testimonials-item text-center">
+							
+							<p class="quote"><img src="img/elements/quote.svg" alt=""></p>
 							
 							<p class="testimonial">I’ve checked marksmansecurity.com. I’m quite impressed with this company. Looks like Greg had approached security issues seriously. We are going through difficult times and we shouldn’t underestimate the importance of building security. Thank you for your effort, Greg!</p>
 							
@@ -366,8 +391,8 @@
 															
 					<li class="awards-item">
 					
-						<a href="img/award-1-big.jpg" title="Gogreen Recognition Award 2012" data-gallery="#blueimp-gallery-awards">
-							<img src="img/award-1.png" alt="">
+						<a href="img/awards/award-1.jpg" title="Gogreen Recognition Award 2012" data-gallery="#blueimp-gallery-awards">
+							<img src="img/awards/award-1-sm.png" alt="">
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -378,8 +403,8 @@
 																
 					<li class="awards-item">
 					
-						<a href="img/award-2-big.jpg" title="Gogreen Recognition Award 2015" data-gallery="#blueimp-gallery-awards">
-							<img src="img/award-2.png" alt="">
+						<a href="img/awards/award-2.jpg" title="Gogreen Recognition Award 2015" data-gallery="#blueimp-gallery-awards">
+							<img src="img/awards/award-2-sm.png" alt="">
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -390,8 +415,8 @@
 					
 					<li class="awards-item">
 					
-						<a href="img/award-3-big.jpg" title="Aventura Marketing Council 2015" data-gallery="#blueimp-gallery-awards">
-							<img src="img/award-3.png" alt="">
+						<a href="img/awards/award-3.jpg" title="Aventura Marketing Council 2015" data-gallery="#blueimp-gallery-awards">
+							<img src="img/awards/award-3-sm.png" alt="">
 						</a>
 						
 						<p class="sans-serif">Aventura Marketing Council</p>
@@ -402,8 +427,8 @@
 					
 					<li class="awards-item">
 						
-						<a href="img/award-4-big.jpg" title="Gogreen Recognition Award 2016" data-gallery="#blueimp-gallery-awards">
-							<img src="img/award-4.png" alt="">
+						<a href="img/awards/award-4.jpg" title="Gogreen Recognition Award 2016" data-gallery="#blueimp-gallery-awards">
+							<img src="img/awards/award-4-sm.png" alt="">
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -414,8 +439,8 @@
 					
 					<li class="awards-item">
 						
-						<a href="img/award-5-big.jpg" title="Gogreen Recognition Award 2017" data-gallery="#blueimp-gallery-awards">
-							<img src="img/award-5.png" alt="">
+						<a href="img/awards/award-5.jpg" title="Gogreen Recognition Award 2017" data-gallery="#blueimp-gallery-awards">
+							<img src="img/awards/award-5-sm.png" alt="">
 						</a>
 						
 						<p class="sans-serif">Gogreen Recognition Award</p>
@@ -434,44 +459,46 @@
 		<section class="letter">
 			
 			<div class="container">
-				
-				<div class="letter-frame">
-				
-					<div class="frame-border decorative-element-2">
-											
-						<h3>A letter from the President</h3>
-						<p class="subheader">Annual letter from our president</p>
+								
+				<div class="letter-frame frame-border-gray decorative-element-2">
+										
+					<h3>A letter from the President</h3>
+					<p class="subheader">Annual letter from our president</p>
+					
+					<div class="letter-content clearfix">
 						
-						<div class="letter-content clearfix">
+						<div class="letter-photo">
 							
-							<div class="letter-photo">
-								
-								<img src="img/president.jpg" alt="">
-								
-							</div>
+							<img src="img/president.jpg" alt="">
 							
-							<div class="letter-text">
-								
-								<p>Dear Fellow Unit Owners,</p>
-								
-								<p>Another year has passed and we are scheduled for the budget and the annual membership meetings on December 14th, 2017. The budget meeting will begin at 6:30 p.m. and the annual meeting at 7:00 p.m. At these meetings, I will inform you about the Association’s financials, as well as our completed and upcoming projects. I would like to express my appreciation to all of those who have contributed their time and efforts and supported the Board of Directors in overcoming the many challenges that we faced during the year. I also would like to acknowledge the contributions of our committed and dedicated employees who have worked hard and diligently to keep our home in a beautiful and desirable condition.</p>
-								
+						</div>
+						
+						<div class="letter-text">
+							
+							<p>Dear Fellow Unit Owners,</p>
+							
+							<p>Another year has passed and we are scheduled for the budget and the annual membership meetings on December 14th, 2017. The budget meeting will begin at 6:30 p.m. and the annual meeting at 7:00 p.m. At these meetings, I will inform you about the Association’s financials, as well as our completed and upcoming projects. I would like to express my appreciation to all of those who have contributed their time and efforts and supported the Board of Directors in overcoming the many challenges that we faced during the year. I also would like to acknowledge the contributions of our committed and dedicated employees who have worked hard and diligently to keep our home in a beautiful and desirable condition.</p>
+							
+							<div id="all-text" class="collapse">
+							
 								<p>Thanks to the persistent work of the Board members, Committees, and Management, we have been able to take the necessary steps to improve the Association’s financial conditions and enforce our Rules and Regulations.Enclosed with this letter, you will find a Limited Proxy concerning waiving the Statutory Reserves (F.S. §718.112(2)(f)) and adapting a minimum required criteria to become a resident of Turnberry on the Green.</p>
 								
 								<p>I recommend all unit owners to vote YES, regarding the above subjects. Please return the Limited Proxy, via email (asst2turnberry@gmail.com), fax (305‐466‐7741), delivered to the management office, or mailed. Please respond as soon as possible, as the time‐frame is short.</p>
 								
-								<p class="cite">Gregory Arzumanov</p>
+								</div>
 								
-								<img src="img/sign.png" class="sign" alt="">
-								
-							</div>
+							<a href="#all-text" class="readmore sans-serif" role="button" data-toggle="collapse">Read More</a>
 							
+							<p class="cite">Gregory Arzumanov</p>
+							
+							<img src="img/sign.png" class="sign" alt="">
+															
 						</div>
-					
+						
 					</div>
 				
 				</div>
-				
+								
 			</div>
 			
 		</section>
@@ -487,7 +514,7 @@
 						
 						<div class="col-sm-4">
 						
-							<img src="img/logo-footer.png" alt="">
+							<img src="img/logo.svg" class="footer-logo" alt="">
 								
 						</div>
 				

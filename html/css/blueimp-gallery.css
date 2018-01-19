@@ -34,8 +34,7 @@
 	position: fixed;
 	z-index: 999999;
 	overflow: hidden;
-	background: #000;
-	background: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.8);
 	opacity: 0;
 	display: none;
 	direction: ltr;
@@ -89,7 +88,7 @@
 }
 
 .blueimp-gallery>.slides>.slide-loading {
-	background: url(../img/loading.gif) center no-repeat;
+	background: url(../img/icons/loading.gif) center no-repeat;
 	background-size: 64px 64px;
 }
 
@@ -105,28 +104,25 @@
 	display: none;
 }
 
-.blueimp-gallery>.prev {
-	position: absolute;
-	top: 50%;
-	left: 2%;
-	width: 30px;
-	height: 40px;
-	margin-top: -20px;
-	cursor: pointer;
-	background: url(../img/arrow-prev.svg) center center no-repeat rgba(0,0,0,0.25);
-	background-size: 10px 16px;
-}
-
+.blueimp-gallery>.prev,
 .blueimp-gallery>.next {
 	position: absolute;
 	top: 50%;
-	right: 2%;
-	width: 30px;
-	height: 40px;
-	margin-top: -20px;
+	width: 40px;
+	height: 60px;
+	margin-top: -30px;
 	cursor: pointer;
-	background: url(../img/arrow-next.svg) center center no-repeat rgba(0,0,0,0.25);
-	background-size: 10px 16px;
+	background-size: 14px 24px;
+}
+
+.blueimp-gallery>.prev {	
+	left: 2%;
+	background: url(../img/icons/arrow-prev.svg) center center no-repeat rgba(0,0,0,0.25);
+}
+
+.blueimp-gallery>.next {
+	right: 2%;
+	background: url(../img/icons/arrow-next.svg) center center no-repeat rgba(0,0,0,0.25);
 }
 
 .blueimp-gallery>.title {
@@ -143,10 +139,10 @@
 	position: absolute;
 	top: 2%;
 	right: 2%;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	cursor: pointer;
-	background: url(../img/close.svg) center center no-repeat rgba(0,0,0,0.25);
+	background: url(../img/icons/close.svg) center center no-repeat rgba(0,0,0,0.25);
 	background-size: 15px 15px;
 }
 
@@ -172,6 +168,11 @@
 .blueimp-gallery>.title:hover,.blueimp-gallery>.play-pause:hover {
 	color: #fff;
 	opacity: 1;
+}
+
+.blueimp-gallery>.prev,.blueimp-gallery>.next,.blueimp-gallery>.close {
+	-webkit-transition: opacity 0.1s ease-out, background-color 0.1s ease-out;
+	        transition: opacity 0.1s ease-out, background-color 0.1s ease-out;
 }
 
 .blueimp-gallery>.prev:hover,.blueimp-gallery>.next:hover,.blueimp-gallery>.close:hover {
